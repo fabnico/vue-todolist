@@ -1,17 +1,22 @@
 const myApp = new Vue({
-   el: '.my_root',
+   el: '#my_root',
    data:{
       userArray: [],
       elToAdd: '',
    },
    methods:{
-      addElement: function (){
+      addElement: function(){
          this.userArray.push(this.elToAdd);
          this.elToAdd = '';
          console.log(this.userArray)
       },
       removeElement: function(index){
          this.userArray.splice(index,1);
+      },
+      show: function(){
+         if(this.userArray.length != 0){
+            return true;
+         }
       }
-   }
+      }
 })
