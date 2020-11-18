@@ -1,0 +1,15 @@
+
+img{
+   width: 100px;
+}
+
+.my_search input {
+   margin-right: 20px;
+   width: 300px;
+}
+
+.my_todo{
+   margin-top: 20px;
+   border-radius: 5px;
+   background-color: lightgrey;
+}
