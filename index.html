@@ -20,9 +20,9 @@
             </section>
             <section>
                <ul v-if="show()" id="list">
-                  <li v-for="(el,index) in userArray">
-                     <span>{{el}}</span>
-                     <i @click="removeElement(index)" class="fa fa-times" aria-hidden="true"></i>
+                  <li v-for="(el,index) in userArray" v-bind:class="el.colorClass ? 'red' : null" @click.stop="color(index)">
+                     <span>{{el.myInput}}</span>
+                     <i @click.stop="removeElement(index)" class="fa fa-times" aria-hidden="true"></i>
                   </li>
                </ul>
             </section>
